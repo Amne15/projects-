@@ -1,0 +1,681 @@
+<!--
+    live server (vscode)
+    https://www.youtube.com/watch?v=wguZozrqKZQ
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Nube Colectiva">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Plantillas</title>
+
+    <!-- Lien extern CSS Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Lien extern CSS -->
+    <link rel="stylesheet" href="./Styles/css/monFichierCSS.css">
+    <!-- Lien extern CSS2 -->
+    <link rel="stylesheet" href=".css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://nubecolectiva.com/favicon.ico">
+
+    <script src="checkDatos.js"></script>
+
+    <script src="./js.js"></script>
+
+    <!--Site web pour les fonts: cdnjs -> bare de recherche fond copier le 1er lien css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!--Site web pour les icones: fontawesome.com -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid">
+            <!-- Header -->
+            <header class="d-flex flex-wrap">
+
+                <nav class="navbar navbar-expand-lg" role="navigation">
+                    <div class="container-fluid">
+                        <div class="logoalma" id="divlogonavbar1">
+                            <img src="./Styles/imagen/logo-hospital.png" alt="">
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon my-1"></span>
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <ul class="navbar-nav me-5">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./Podologia.html">Podologia</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./Quiropodia.html">Quiropodia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./Cirugia.html">Cirugía podológica</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./Estudiopisada.html">Estudio de la
+                                    pisada</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./Pododeportiva.html">Podología
+                                    deportiva</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./Plantillas.html">Tratamiento de
+                                    plantillas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./Saludpie.html">Salud del pie</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./Contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </header>
+            
+            <!--Section hospital-->
+            <!-- Baniere -->
+            <section class="baniere row" id="baniere">
+
+                <div class="col-md-6">
+                    <div class="baniere-text">
+                        <h1>Plantillas</h1>
+                        <p><b>hospital </b>La mejor clinica</p>
+                    </div>
+
+                    <div class="baniere_btn">
+                        <a href="#nom_ancre"><span></span>Empezar</a>
+                        <a href="#"><span></span>Ver mas</a>
+                    </div>
+                </div>
+
+                <div class="formulaire row col-md-6">
+
+                    <form class="row row-cols-1 text-white g-3" action="">
+                        <div class="row-cols-1 baniere-text mb-4">
+                            <h2 class="">¡Pide cita con nosotros ahora!</h2>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First name"
+                                    aria-label="First name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Apellido1" aria-label="Apellido1">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Apellido2" aria-label="Apellido2">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Email" aria-label="Email">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="tel" class="form-control" placeholder="Telefono" aria-label="Telefono">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="tel" class="form-control" placeholder="Telefono-2" aria-label="Telefono2">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="1234 calle Malaga"
+                                    aria-label="address" id="inputAddress">
+                                <div id="passwordHelpBlock" class="form-text text-white">
+                                    Your adress must be 8-50 characters long.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <select id="inputClinica" class="form-select" aria-placeholder="clinica_Preferente">
+                                    <option selected>clinica Preferente</option>
+                                    <option>Granada centro</option>
+                                    <option>Almuñecar</option>
+                                    <option>Motril</option>
+                                    <option>Las Gabias</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Carousel -->
+            <section class="myCarousel" id="myCarousel">
+                <div class="carouselprincipal">
+                    <div class="carouselinterieur">
+                        <div id="carouselBootstrap" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                            <!-- Les indicateurs-->
+                            <ol class="carousel-indicators">
+                                <li data-bs-target="#carouselBootstrap" data-bs-slide-to="0" class="active"></li>
+                                <li data-bs-target="#carouselBootstrap" data-bs-slide-to="1"></li>
+                                <li data-bs-target="#carouselBootstrap" data-bs-slide-to="2"></li>
+                            </ol>
+                            <!-- Wrapper for carousel items -->
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row carousel_perso">
+                                        <div class="col-lg-8  carousel_img">
+                                            <img class="" src="./Styles/imagen/carousel/plantillas3.jpg"
+                                                alt="Premier slide Podologia">
+                                        </div>
+                                        <div class="col-lg-4 carousel_text align-self-center">
+                                            <h4>Podólogo en la provincia de Granada</h4>
+                                            <h5>Podología</h5>
+                                            <p>En hospital cuidamos la salud de tus pies desde hace más de 20 años con
+                                                nuestros podólogos.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row carousel_perso">
+                                        <div class="col-lg-8 carousel_img">
+                                            <img class="rounded rounded-circle" src="./Styles/imagen/carousel/plantillas4.jpg"
+                                                alt="Premier slide Podologia">
+                                        </div>
+                                        <div class="col-lg-4 carousel_text align-self-center">
+                                            <h4>Quiropodia</h4>
+                                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row carousel_perso">
+                                        <div class="col-lg-8 carousel_img">
+                                            <img class="rounded rounded-circle" src="./Styles/imagen/carousel/plantillas.jpg"
+                                                alt="Premier slide Podologia">
+                                        </div>
+                                        <div class="col-lg-4 carousel_text align-self-center">
+                                            <h4>First slide label</h4>
+                                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Les commandes de contrôle-->
+                            <a class="carousel-control-prev" href="#carouselBootstrap" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselBootstrap" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Nav Lateral -->
+            <section>
+
+                <div class="sidebarlateral">
+                    <h5>Granada</h5>
+                    <p>958 80 45 54</p>
+                    <hr>
+                    <h5>Almuñecar</h5>
+                    <p>958 88 00 80</p>
+                    <hr>
+                    <h5>Motril</h5>
+                    <p>958 83 40 61</p>
+                    <hr>
+                    <h5>Las Gabias</h5>
+                    <p>958 58 61 80</p>
+                </div>
+
+                <!--https://fontawesome.com/-->
+                <div class="btn-menu-lateral">
+                    <!--<i class="fas fa-bars"></i>-->
+                    <!--<i class="fas fa-times"></i>-->
+                    <!--<i class="fas fa-bars"></i>-->
+                    <i class="fas fa-solid fa-phone"></i>
+                    <i class="fas fa-solid fa-circle-xmark"></i>
+                </div>
+            </section>
+
+            <!--Mission 2-->
+            <section class="mission" name="mission" id="mission">
+                <div class="container-fluid ">
+                    <!---->
+                    <div class="container">
+                        <div class="titre-text">
+                            <h1 class="titre_p">
+                                Cirugía podológica del pie
+                            </h1>
+                            <div class="text_p_left">
+                                <p class="">
+                                    En hospital contamos con el servicio de cirugía podológica que es el único
+                                    tratamiento que puede combatir diversas patologías. Así, tratamos de forma
+                                    quirúrgica papilomas, quistes, uñas encarnadas, metatarsalgias y juanetes.
+                                    La ventaja de este tipo de cirugía es que, por lo general, se trata de
+                                    intervenciones sencillas que se realizan de forma ambulatoria y con anestesia local,
+                                    lo que permite una recuperación más rápida del paciente. Además, gracias a la
+                                    cirugía podológica podemos eliminar muchas molestias, malformaciones y patologías de
+                                    forma definitiva.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---->
+
+                    <div class="mission-boite-principal">
+                        <div class="mission-boite container">
+                            <div class="titre-text-seg">
+                                <h2>Breve descripción sobre la cirugía podológica del pie:</h2>
+                            </div>
+                            <div class="missions" id="accordionperso">
+
+                                <div class="mission1">
+                                    <h4>¿Qué es la cirugía podológica del pie?</h4>
+                                    <div class="description" id="headingOne">
+                                        <div class="mission-icon">
+                                            <a href="#" class="collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                <i class="fas fa-solid fa-thumbs-up"
+                                                    style="color:rgb(25, 154, 177);"></i>
+                                            </a>
+                                        </div>
+                                        <div class="mission-text">
+                                            <p>La cirugía podológica</p>
+                                        </div>
+                                    </div>
+                                    <div class="card card_bg_customer border-0">
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                            data-bs-parent="#accordionperso">
+                                            <div class="card-body p-3 mb-2 card_text_customer">
+                                                <p>La cirugía podológica del pie es una intervención quirúrgica que se
+                                                    encarga del tratamiento y de la corrección definitiva de
+                                                    enfermedades y malformaciones que aparecen en los pies.
+
+                                                    Se trata de una cirugía que, dentro del área de la Podología, es uno
+                                                    de los métodos más utilizados para tratar patologías que afectan al
+                                                    pie, obteniendo grandes resultados.</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mission2">
+                                    <h4>¿Por qué se realiza la cirugía podológica del pie?</h4>
+                                    <div class="description" id="heading2">
+                                        <div class="mission-icon">
+                                            <a href="#" class="collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#collapse2" aria-expanded="false"
+                                                aria-controls="collapse2"><i class="fas fa-solid fa-thumbs-up"
+                                                    style="color:rgb(25, 154, 177);"></i></a>
+                                        </div>
+                                        <div class="mission-text">
+                                            <p>La cirugía podológica</p>
+                                        </div>
+                                    </div>
+                                    <div class="card card_bg_customer border-0">
+                                        <div id="collapse2" class="collapse" aria-labelledby="heading2"
+                                            data-bs-parent="#accordionperso">
+                                            <div class="card-body p-3 mb-2 card_text_customer">
+
+                                                <p>La cirugía podológica del pie tiene la finalidad de aportar
+                                                    soluciones definitivas a patologías o enfermedades que afectan al
+                                                    pie y al tobillo, pero que no han podido ser corregidas mediante el
+                                                    tratamiento conservador.
+
+                                                    La cirugía podológica cubre una gama amplia de deformidades y
+                                                    patologías, desde cirugías más básicas hasta cirugías más complejas.
+                                                    De esta manera, las patologías que se tratan más frecuentemente a
+                                                    través de la cirugía podológica del pie son:
+
+                                                    Patologías más simples, como uñas encarnadas
+                                                    Patologías de origen dérmico, como papilomas o quistes
+                                                    Patologías más complejas, como hallux valgus (juanetes), dedos en
+                                                    garra, juanete de sastre, metatarsalgias, fascitis plantar, artrosis
+                                                    del pie, Neuroma de Morton, talalgias y espolón calcáneo
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mission3">
+                                    <h4>¿En qué consiste la cirugía podológica del pie?</h4>
+                                    <div class="description" id="heading3">
+                                        <div class="mission-icon">
+                                            <a href="#" class="collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#collapse3" aria-expanded="false"
+                                                aria-controls="collapse3"><i class="fas fa-solid fa-thumbs-up"
+                                                    style="color:rgb(25, 154, 177);"></i></a>
+                                        </div>
+                                        <div class="mission-text">
+                                            <p>La cirugía podológica del pie</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="card card_bg_customer border-0">
+                                        <div id="collapse3" class="collapse" aria-labelledby="heading3"
+                                            data-bs-parent="#accordionperso">
+                                            <div class="card-body p-3 mb-2 card_text_customer">
+                                                <p>La cirugía podológica del pie es una intervención quirúrgica que, en
+                                                    la gran mayoría de los casos, se realiza mediante anestesia local.
+                                                    Sin embargo, en ocasiones se realiza bajo sedación consciente, para
+                                                    conseguir que el paciente esté más cómodo durante la intervención.
+
+                                                    Además, se trata de una cirugía que se lleva a cabo en régimen
+                                                    ambulatorio. En este sentido, la operación se realiza sin necesidad
+                                                    de ingreso, de manera que normalmente el paciente puede volver a
+                                                    casa el mismo día de la intervención.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mission4">
+                                    <h4>Preparación para la cirugía podológica del pie</h4>
+                                    <div class="description" id="heading4">
+                                        <div class="mission-icon">
+                                            <a href="#" class="collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#collapse4" aria-expanded="false"
+                                                aria-controls="collapse4"><i class="fas fa-solid fa-thumbs-up"
+                                                    style="color:rgb(25, 154, 177);"></i></a>
+                                        </div>
+                                        <div class="mission-text">
+                                            <p>La quiropodia es el tratamiento.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="card card_bg_customer border-0">
+                                        <div id="collapse4" class="collapse" aria-labelledby="heading4"
+                                            data-bs-parent="#accordionperso">
+                                            <div class="card-body p-3 mb-2 card_text_customer">
+
+                                                <p>Antes de realizar la cirugía, es muy importante que el médico haga
+                                                    una evaluación al paciente y para medir el estado de la salud
+                                                    podológica del paciente. En función del nivel de gravedad, el
+                                                    especialista determinará cuál es la técnica más indicada para tratar
+                                                    la patología.
+
+                                                    Una vez que se decide la técnica a realizar, el médico realiza una
+                                                    serie de pruebas al paciente, que incluyen radiografías, ecografías
+                                                    y radioscopia. De esta manera, es posible realizar el tratamiento
+                                                    más adecuado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mission5">
+                                    <h4>Cuidados tras la intervención</h4>
+                                    <div class="description" id="heading5">
+                                        <div class="mission-icon">
+                                            <a href="#" class="collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#collapse5" aria-expanded="false"
+                                                aria-controls="collapse5"><i class="fas fa-solid fa-thumbs-up"
+                                                    style="color:rgb(25, 154, 177);"></i></a>
+                                        </div>
+                                        <div class="mission-text">
+                                            <p>La quiropodia es el tratamiento.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="card card_bg_customer border-0">
+                                        <div id="collapse5" class="collapse" aria-labelledby="heading5"
+                                            data-bs-parent="#accordionperso">
+                                            <div class="card-body p-3 mb-2 card_text_customer">
+
+                                                <p>Aunque este tipo de cirugía cuenta con un postoperatorio rápido y
+                                                    satisfactorio, tras la cirugía podológica del pie es importante
+                                                    seguir una serie de pautas. Estas pautas siempre dependerán de una
+                                                    serie de factores como las características de cada individuo o la
+                                                    técnica utilizada para llevar a cabo la cirugía, ya que puede variar
+                                                    mucho de un individuo a otro.
+
+                                                    Sin embargo, existen una serie de pautas básicas:
+
+                                                    Reposo relativo durante las 48 horas posteriores a la intervención
+                                                    No hacer grandes caminatas ni actividades físicas intensas durante
+                                                    los primeros 15 días
+                                                    Utilizar zapatos postquirúrgicos y abiertos durante una semana
+                                                    Tomar antiinflamatorios o analgésicos en el caso de que aparezca
+                                                    dolor tras la intervención
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="im-mission">
+                                <!--image a droit-->
+                                <img src="./Styles/imagen/carousel/plantillas8.jpg" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+
+            </section>
+
+            <!--Mission 3-->
+            <section class="service" id="service">
+                <!---->
+                <div class="container">
+                    <div class="titre-text">
+                        <h1 class="titre_p">Servicios</h1>
+                        <div class="text_p_left ps-2">
+                            <h6 class="">
+                                La quiropodia es el tratamiento de podología que se encarga de corregir o eliminar
+                                callosidades, durezas y alteraciones de las uñas de los pies que, si bien no son
+                                patologías
+                                graves, sí pueden derivar en otras de mayor envergadura.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!---->
+                <div class="mission-boite-service-principal">
+                    <div class="titre-text-seg ps-2">
+                        <h2>En nuestro servicio de quiropodia ofrecemos:</h2>
+                    </div>
+                    <div class="service-boite container">
+                        <div class="service-unique">
+                            <img src="./Styles/imagen/carousel/plantillas9.jpg" alt="">
+                            <div class="text-sur">
+                                <div class="descrip">
+                                    <h4>Tratamiento de callosidades</h4>
+                                    <hr>
+                                    <p>Tratamiento de callosidades</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-unique">
+                            <img src="./Styles/imagen/carousel/plantillas4.jpg" alt="">
+                            <div class="text-sur">
+                                <div class="descrip">
+                                    <h4>Eliminación de durezas</h4>
+                                    <hr>
+                                    <p>Eliminación de durezas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-unique">
+                            <img src="./Styles/imagen/carousel/plantillas1.jpg" alt="">
+                            <div class="text-sur">
+                                <div class="descrip">
+                                    <h4>Tratamiento de helomas y ojos de gallo</h4>
+                                    <hr>
+                                    <p>Tratamiento de helomas y ojos de gallo</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-unique">
+                            <img src="./Styles/imagen/carousel/plantillas2.jpg" alt="">
+                            <div class="text-sur">
+                                <div class="descrip">
+                                    <h4>Fresado de talones</h4>
+                                    <hr>
+                                    <p>Fresado de talones</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-unique">
+                            <img src="./Styles/imagen/carousel/plantillas6.jpg" alt="">
+                            <div class="text-sur">
+                                <div class="descrip">
+                                    <h4>Masaje e hidratación de los pies</h4>
+                                    <hr>
+                                    <p>Breve masaje e hidratación de los pies</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-unique">
+                            <img src="./Styles/imagen/carousel/plantillas7.jpg" alt="">
+                            <div class="text-sur">
+                                <div class="descrip">
+                                    <h4>Corte de uñas</h4>
+                                    <hr>
+                                    <p>Corte de uñas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 container-fluid">
+        <div class="container">
+            <!-- footer infos -->
+            <div class="cardfooter row">
+                <div class="card col-lg-3">
+                    <div class="card-title">
+                        <h3>Sobre hospital</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            Clínica especialista en Servicios Médicos y Sanitarios con más de 20 años de experiencia.
+                            Contamos con numerosas especialidades: Fisioterapia, Podología, Medicina Estética, etc.
+                            ¡Cuidamos de tu salud y bienestar!
+                        </p>
+                        <a href="#"><i class="fas fa-solid fa-envelope me-2"></i></i>general@hospital.com</a>
+                    </div>
+                </div>
+
+                <div class="card col-lg-3">
+                    <div class="card-title">
+                        <h3>Nuestras clínicas</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fas fa-solid fa-location-dot me-2 my-2"></i>Granada</a></li>
+                            <li><a href="#"><i class="fas fa-solid fa-location-dot me-2 my-2"></i>Almuñecar</a></li>
+                            <li><a href="#"><i class="fas fa-solid fa-location-dot me-2 my-2"></i>Motril</a></li>
+                            <li><a href="#"><i class="fas fa-solid fa-location-dot me-2 my-2"></i>Las Gabias</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card col-lg-3">
+                    <div class="card-title">
+                        <h3>Servicios</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Tratamientos Éstéticos</a></li>
+                            <li><a href="#">Dental</a></li>
+                            <li><a href="#">Servicios Clínicos</a></li>
+                            <li><a href="#">Especialidades</a></li>
+                            <li><a href="#">Ginecología y Urología</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card col-lg-3">
+                    <div class="card-title">
+                        <h3>¿Quieres pedir tu cita?</h3>
+                    </div>
+                    <div class="card-body">
+                        <a href="#">Haz click aquí</a>
+                        <p>Síguenos en:</p>
+                        <div class="iconsocial">
+                            <ul class="list-unstyled d-flex">
+                                <li><a href="https://www.facebook.es"> <i class="bi bi-facebook me-5"></i></a></li>
+                                <li><a href="https://www.twitter.es"><i class="bi bi-twitter me-5"></i></a></li>
+                                <li><a href="https://www.instagram.es"><i class="bi bi-instagram me-5"></i></a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- derechos reservados -->
+            <div class="my-5 text-center">
+                <span class="text-light ">
+                    © hospital – Todos los derechos reservados | Desarrollo web por © C2 INTELLIGENT SOLUTIONS <br>
+                    Política de Privacidad – Aviso Legal – Política de Cookies ©
+                    <script>document.write(new Date().getFullYear())</script>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Archivo JS Bootstrap 5 -->
+    <!-- <script src="./Html/bootstrap5/js/bootstrap.bundle.min.js"></script>-->
+    <!-- Lien extern JS Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+    <!-- Script botton menu nav lateral  -->
+    <script>
+        document.querySelector('.fa-circle-xmark').style.display = "none";
+
+        const menuBtn = document.querySelector('.btn-menu-lateral');
+        const Sidebar = document.querySelector('.sidebarlateral');
+
+        menuBtn.onclick = function () {
+            if (Sidebar.style.right == '-250px') {
+                Sidebar.style.right = "0"
+                document.querySelector('.fa-circle-xmark').style.display = "";
+                document.querySelector('.fa-phone').style.display = "none";
+            } else {
+                Sidebar.style.right = "-250px"
+                document.querySelector('.fa-circle-xmark').style.display = "none";
+                document.querySelector('.fa-phone').style.display = "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

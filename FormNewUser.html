@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+<title>Index Raffinty</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../styleCss/FormNewUsers1.css">
+<script type="text/javascript" src="../../Controler/checkDatos.js"></script>
+<!-- <link rel="stylesheet" href="https://------"> -->
+</head>
+<body>
+	<header>
+		<img src="./Raffinity.jpg" id="logo">
+		
+			<!--
+				<p id="usersherch" ><input type="search" placeholder="Buscar" size="30"></input></p>
+				<td id="celtablhead3"><a href="showUsers.php"><span class="user">List of Users</span></a></td>
+				<td id="celtablhead4"><a href="./Html/FormNewUser.html"><span class="user">Add new user</span></a></td>
+			-->		
+	</header>
+
+	<nav class="divnav">
+		<ul id="ul1">
+			<li class="menu1"><a href="../index.php">Movies</a></li>
+			<li class="menu1"><a href="../showUsers.php">Favorit</a></li>
+			<li class="menu1"><a href="FormNewMovie.html">Add Movie</a></li>
+		</ul>
+		<ul id="ul2">
+			<li class="menu2"><a href="FormNewUser.html">Add New User</a></li>
+			<li class="menu2"><a href="../showUsers.php">List Of Users</a></li>			
+			<li class="menu2">
+			<form method="post" action="searchMovie.php">
+			   <input name="namesherch" id="usersherch" type="search" placeholder="Buscar" size="30">
+		       <input type="submit" name="buttonnamesherch" value="Search"/>
+	        </form>
+			</li>	
+		</ul>
+
+	</nav>
+
+
+	<!--<div class="divprincipal">-->
+	<div class="divPrincipalProject">
+		<form id="myform" name="formuser" action="../../Controler/processInsertUserControl.php" method="post">
+			<!--Action: Redirects us to the Processform.php, Is responsible for collection the values (data) for insertion into the database-->
+			<div class="divUser" id="idDivAvatarUser">				
+				<img src="" id="idImgAvatarUser"><br>
+				<input type="button" id="verificarAvatar" value="Validar Foto" name="avataruser" onclick="previsualizarUser()"/>			
+			</div>
+			<div class="divUser" id="idDivDatosUser">
+				<label for="nickName">Nick</label>
+					<input  type="text" id="nickName" name="nickName" required/>
+					<input id="generar" type="button" id="idgenerar" name="" value="Generar" onclick="generaNickDelEmail()"/><br>
+				<label for="email">Email</label>
+					<input type="email" id="email" name="email" required/><br>
+					<!--<label id="msgValidacion"></label><br>-->
+				<label for="url">Foto URL</label>
+					<input type="url" name="avatarURL" id="url" placeholder="https://"><br>
+
+				<!--<input id="addnewuser" name="submit" value="Add New User" onclick="validationEmail()"/>-->
+				<!--<input type="submit" id="addnewuser" name="addnewuser" value="Add New User"  onclick="validationEmail('email')"/>-->
+				<button id="addnewuser" name="addnewuser"  onclick="return sendFormUser()">Add New User</button>
+			
+			</div>
+
+
+			
+		</form>
+	</div>
+		
+</body>
+<footer>
+	<p>welcome to our Raffinty</p>
+</footer>
+</html>

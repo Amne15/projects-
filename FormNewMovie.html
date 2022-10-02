@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+<title>Index Raffinty</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../styleCss/FormNewMovi.css">
+<script type="text/javascript" src="../../Controler/checkDatos.js"></script>
+<!-- <link rel="stylesheet" href="https://------"> -->
+</head>
+<body>
+	<header>
+		<img src="./Raffinity.jpg" id="logo">
+		
+			<!--
+				<p id="usersherch" ><input type="search" placeholder="Buscar" size="30"></input></p>
+				<td id="celtablhead3"><a href="showUsers.php"><span class="user">List of Users</span></a></td>
+				<td id="celtablhead4"><a href="./Html/FormNewUser.html"><span class="user">Add new user</span></a></td>
+			-->		
+	</header>
+
+	<nav class="divnav">
+		<ul id="ul1">
+			<li class="menu1"><a href="../index.php">Movies</a></li>
+			<li class="menu1"><a href="../showUsers.php">Favorit</a></li>
+			<li class="menu1"><a href="FormNewMovie.html">Add Movie</a></li>
+		</ul>
+		<ul id="ul2">
+			<li class="menu2"><a href="FormNewUser.html">Add New User</a></li>
+			<li class="menu2"><a href="../showUsers.php">List Of Users</a></li>			
+			<li class="menu2">
+			<form method="post" action="searchMovie.php">
+			   <input name="namesherch" id="usersherch" type="search" placeholder="Buscar" size="30">
+		       <input type="submit" name="buttonnamesherch" value="Search"/>
+	        </form>
+			</li>	
+		</ul>
+
+	</nav>
+
+	<!--<div class="divPrincipalProject">-->
+	<div class="divprincipal">
+		<!--<form name="RegForm" action="/submit.php" onsubmit="return W3docs()" method="post" class="w3docs">-->
+		<form name="myform" action="../../Controler/processInsertMovieControl.php" method="post" id="myform" >
+			<!--Action: Redirects us to the Processform.php, Is responsible for collection the values (data) for insertion into the database-->
+			<div class="divMovie" id="idDivUrlMovie">				
+				<img src="" id="idImgMovie"><br>
+				<input type="button" id="verificarAvatar" value="Verificar Foto" name="avatarMovie" onclick="previsualizarMovie()"/>			
+			</div>
+			<div class="divMovie" id="idDivDatosMovie">
+				<label for="name">Nombre Pelicula</label>
+					<input type="text" id="name" name="name" required/><br>
+
+				<label for="releaseyear">Año</label>
+					<input type="number" id="releaseyear" name="releaseyear" required/><br>
+
+				<label for="directorname">Director</label>
+					<input type="text" id="directorname" name="directorname" required/><br>
+
+
+				<label for="posterurl">Foto URL</label>
+					<input type="url" name="posterurl" id="posterurl" placeholder="https://"><br>
+
+				<label for="synopsis">Sinopsis:</label><br>
+					<textarea type="text" id="idtextSinopsis" name="synopsis" placeholder="Resumen" required></textarea><br><br>
+
+				<!--<input type="button" id="anadirpelicula" value="Anadir Pelicula" name="anadirpelicula"/>-->
+				<!--<input type="submit" id="anadirpelicula" name="anadirpelicula" value="Add New Movie"/>-->
+				<!--<button id="addnewmovie" name="addnewmovie"  onsubmit="return sendFormMovie()">Add New Movie</button>-->
+				
+				<!--<div class="buttons">-->
+					<!--<input type="submit" value="Envoyer" name="Envoyer">-->
+					<button id="addnewmovie" name="addnewmovie"  onclick="return sendFormMovie()">Add New Movie</button>				
+					<!--<input type="reset" value="Rénit" name="Reset">-->
+				<!--</div>-->				
+			</div>			
+		</form>
+		
+	</div>
+		
+</body>
+<footer>
+	<p>welcome to our Raffinty</p>
+</footer>
+</html>
